@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lay_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#fafafa"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_close_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="请输入支付密码"
+                android:textColor="#232323"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c6c6c6" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+
+            <FrameLayout
+                android:id="@+id/lay_pay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="32dp">
+
+                    <com.lcf.payview.keyboard.PayInputView
+                        android:id="@+id/pay_input_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        app:pay_border_color="@color/color_c9c9c9"
+                        app:pay_border_width="2px"
+                        app:pay_corner_radius="5dp" />
+
+                    <TextView
+                        android:id="@+id/tv_forget_psd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="right"
+                        android:gravity="bottom|right"
+                        android:text="忘记密码?"
+                        android:textColor="#00a0e9"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <com.lcf.payview.keyboard.KeyboardView
+                    android:id="@+id/keyboard_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.lcf.payview.requestbutton.RequestButton
+                    android:id="@+id/request_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:request_icon_color="@color/colorAccent"
+                    app:request_icon_size="2dp"
+                    app:request_icon_spacing="8dp"
+                    app:request_icon_style="tick_start_circle"
+                    app:request_icon_width="56dp"
+                    app:request_speed_multiplier="2"
+                    app:text_color="#232323"
+                    app:text_default="default"
+                    app:text_failure="失败"
+                    app:text_progress="请求中..."
+                    app:text_size="16sp"
+                    app:text_success="成功" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
