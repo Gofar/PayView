@@ -2,7 +2,7 @@
 <Button xmlns:android="http://schemas.android.com/apk/res/android"
     style="?android:attr/borderlessButtonStyle"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="@dimen/keyboard_item_height"
     android:background="@drawable/selector_key_background"
     android:textColor="@android:color/black"
     android:textSize="22sp" />

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#fafafa"
+        android:background="#EFFFFFFF"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -39,7 +39,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="320dp">
+            android:layout_height="@dimen/input_height">
 
             <FrameLayout
                 android:id="@+id/lay_pay"
@@ -49,7 +49,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
@@ -58,7 +58,7 @@
                     <com.lcf.payview.keyboard.PayInputView
                         android:id="@+id/pay_input_view"
                         android:layout_width="match_parent"
-                        android:layout_height="44dp"
+                        android:layout_height="48dp"
                         app:pay_border_color="@color/color_c9c9c9"
                         app:pay_border_width="2px"
                         app:pay_corner_radius="5dp" />

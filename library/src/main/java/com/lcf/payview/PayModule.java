@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * @since 1.0
  */
 @Target(ElementType.TYPE)
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.CLASS)
 public @interface PayModule {
     String value() default "";
 }

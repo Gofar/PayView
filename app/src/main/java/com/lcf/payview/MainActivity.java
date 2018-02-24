@@ -19,5 +19,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, PayCompatActivity.class));
             }
         });
+
+        if (PayHandlerImpl.class.isAnnotationPresent(PayModule.class)) {
+            PayModule module = PayHandlerImpl.class.getAnnotation(PayModule.class);
+            String value = module.value();
+            textView.setText(value);
+        }
     }
 }

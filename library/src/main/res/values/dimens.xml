@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="keyboard_item_height">56dp</dimen>
+    <dimen name="input_height">348dp</dimen>
+</resources>

@@ -38,11 +38,11 @@ public class KeyboardAdapter extends RecyclerView.Adapter<KeyboardAdapter.ViewHo
         }
         View view;
         if (viewType == KeyboardType.TYPE_DELETE) {
-            view = mLayoutInflater.inflate(R.layout.item_keyboard_delete, null);
+            view = mLayoutInflater.inflate(R.layout.item_keyboard_delete, parent, false);
         } else if (viewType == KeyboardType.TYPE_EMPTY) {
-            view = mLayoutInflater.inflate(R.layout.item_keyboard_empty, null);
+            view = mLayoutInflater.inflate(R.layout.item_keyboard_empty, parent, false);
         } else {
-            view = mLayoutInflater.inflate(R.layout.item_keyboard_key, null);
+            view = mLayoutInflater.inflate(R.layout.item_keyboard_key, parent, false);
         }
         final ViewHolder holder = new ViewHolder(view);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
