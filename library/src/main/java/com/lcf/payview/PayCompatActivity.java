@@ -93,12 +93,14 @@ public class PayCompatActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onFinish(boolean isSuccess) {
                 // 延迟一秒关闭
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        finish();
-                    }
-                }, 1000);
+                if (isSuccess) {
+                    mHandler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            finish();
+                        }
+                    }, 1000);
+                }
             }
         });
 
@@ -143,12 +145,25 @@ public class PayCompatActivity extends AppCompatActivity implements View.OnClick
         mLayPay.setVisibility(View.GONE);
         mLayLoading.setVisibility(View.VISIBLE);
         mRequestButton.startRequest();
-        mHandler.postDelayed(new Runnable() {
+//        mHandler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                //mRequestButton.requestSuccess();
+//                mRequestButton.requestFailure();
+//            }
+//        }, 3000);
+        PayHelper.getInstance().doPay(psd, new IPayCallBack() {
             @Override
-            public void run() {
+            public void onSuccess(String msg) {
                 mRequestButton.requestSuccess();
             }
-        }, 3000);
+
+            @Override
+            public void onFailed(Throwable e) {
+                mRequestButton.requestFailure();
+            }
+        });
+
     }
 
     @Override

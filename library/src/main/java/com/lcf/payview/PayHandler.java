@@ -11,7 +11,7 @@ public abstract class PayHandler {
      *
      * @param psd
      */
-    public abstract void onPay(String psd);
+    public abstract String onPay(String psd) throws Exception;
 
     /**
      * 支付成功
@@ -25,5 +25,5 @@ public abstract class PayHandler {
      *
      * @param msg 支付信息
      */
-    public abstract void onFailed(String msg);
+    public abstract void onFailed(Throwable msg);
 }

@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lcf.payview" />
+    package="com.lcf.payview">
+
+    <application>
+        <activity
+            android:name=".PayCompatActivity"
+            android:theme="@style/PayActivityStyle" />
+    </application>
+</manifest>
