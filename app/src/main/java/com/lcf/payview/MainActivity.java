@@ -25,5 +25,12 @@ public class MainActivity extends AppCompatActivity {
             String value = module.value();
             textView.setText(value);
         }
+
+        findViewById(R.id.btn_set).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SetPayActivity.class));
+            }
+        });
     }
 }

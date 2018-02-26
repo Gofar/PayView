@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="请输入支付密码" />
+
+    <com.lcf.payview.keyboard.PayInputView
+        android:id="@+id/pay_input_view1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:pay_border_color="@color/color_c9c9c9"
+        app:pay_border_width="2px"
+        app:pay_corner_radius="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="请确认支付密码" />
+
+    <com.lcf.payview.keyboard.PayInputView
+        android:id="@+id/pay_input_view2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:pay_border_color="@color/color_c9c9c9"
+        app:pay_border_width="2px"
+        app:pay_corner_radius="5dp" />
+</LinearLayout>

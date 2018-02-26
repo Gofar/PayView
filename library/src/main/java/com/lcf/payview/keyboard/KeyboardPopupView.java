@@ -47,6 +47,9 @@ public class KeyboardPopupView extends PopupWindow {
 
     public void show(View root, PayInputView view) {
         view.setKeyboardView(mKeyboardView);
+        if (isShowing()) {
+            return;
+        }
         showAtLocation(root, Gravity.BOTTOM, 0, 0);
     }
 }
